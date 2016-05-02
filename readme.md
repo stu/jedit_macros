@@ -3,6 +3,10 @@ Small collection of jEdit macros that I created that I thought might be worthwhi
 
 -Stu
 
+### C/Include_Guard.sbh
+Modification of the GPLd version of the one that is distributed with jEdit.
+This version includes an extra extern "C" {} wrap.
+
 ### guid.bsh
 Inserts a guid at the cursor
 
