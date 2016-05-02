@@ -1,0 +1,57 @@
+int width = 78;
+
+Selection[] selection = textArea.getSelection();
+
+StringBuffer sb = new StringBuffer();
+
+for(int j=0; j < selection.length; j++)
+{
+	if(j > 0)
+		sb.append(" ");
+	
+	sb.append(textArea.getSelectedText(selection[0]));
+}
+
+String s = sb.toString();
+s = s.replace("\n", " ");
+s = s.replace("  ", " ");
+
+sb = new StringBuffer();
+
+j = 0;
+while(j < s.length())
+{
+	if(j + width > s.length())
+	{
+		sb.append(s.substring(j) + "\n");
+		j += width;
+	}
+	else
+	{
+		int end = j + width;
+		int flag = 0;
+		
+		while(flag == 0)
+		{
+			if(s.charAt(end) == 0x20)
+			{
+				sb.append(s.substring(j, end) + "\n");
+				flag = 1;
+				j = end + 1;
+			}
+			else
+			{
+				end -= 1;
+				if(j == end)
+				{
+					Macros.error( view, "Line too long!" );
+				}
+			}
+		}
+	}
+}
+
+s = sb.toString();
+s = s.trim();
+
+textArea.setSelectedText(s.toString());

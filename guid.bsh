@@ -1,0 +1,15 @@
+void addGUID()
+{
+	if(buffer.isUntitled())
+	{
+		Macros.error(view, "Name the file before inserting an include guard.");
+		return;
+	}
+	
+	import java.util.UUID;
+	uid = UUID.randomUUID();
+	
+	textArea.setSelectedText("" + uid + "");
+}
+	
+	addGUID();
