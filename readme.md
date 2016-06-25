@@ -7,6 +7,10 @@ Small collection of jEdit macros that I created that I thought might be worthwhi
 Modification of the GPLd version of the one that is distributed with jEdit.
 This version includes an extra extern "C" {} wrap.
 
+### FindWordAtCursor.bsh
+This does a search of whats under the cursor. I wanted a fast 'find it'
+that was not a hypersearch.
+
 ### guid.bsh
 Inserts a guid at the cursor
 

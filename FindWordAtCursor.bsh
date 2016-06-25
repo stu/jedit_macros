@@ -1,0 +1,10 @@
+// Finds word under cursor
+textArea.selectWord();
+SearchAndReplace.setSearchString(textArea.getSelectedText().toString());
+SearchAndReplace.setAutoWrapAround(true);
+SearchAndReplace.setReverseSearch(false);
+SearchAndReplace.setWholeWord(false);
+SearchAndReplace.setIgnoreCase(true);
+SearchAndReplace.setRegexp(false);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+SearchAndReplace.find(view);
