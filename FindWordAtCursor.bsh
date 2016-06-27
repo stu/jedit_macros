@@ -8,3 +8,4 @@ SearchAndReplace.setIgnoreCase(true);
 SearchAndReplace.setRegexp(false);
 SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
 SearchAndReplace.find(view);
+textArea.goToPrevCharacter(false);
